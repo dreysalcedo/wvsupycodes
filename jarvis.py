@@ -43,15 +43,15 @@ def speak(audio):
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
-        speak("Good Morning Madam!")
+        speak("Good Morning Sir!")
 
     elif hour>=12 and hour<18:
-        speak("Good Afternoon Madam!")   
+        speak("Good Afternoon Sir!")   
 
     else:
-        speak("Good Evening Madam!")  
+        speak("Good Evening Sir!")  
 
-    speak("I am Molly. Please tell me how may I help you")   
+    speak("I am Jarvis. Please tell me how may I help you")   
 wishMe()
 
 def takeCommand():
@@ -93,16 +93,16 @@ def assistant(query):
                 #encrypt session
                 mail.starttls()
                 #login
-                mail.login('recabarbm@gmail.com', 'recabarbeamerr05')
+                mail.login('username', 'password')
                 #send message
-                mail.sendmail('Bea Merr Recaabr', 'beamerr.recabar@wvsu.edu.ph', content)
+                mail.sendmail('name', 'email', content)
                 #close
                 mail.close                
                 #email sent
                 speak('email sent')
                 
             except:
-                speak('Sorry Madam! I am unable to send your message at this moment!')    
+                speak('Sorry sir! I am unable to send your message at this moment!')    
              
               
         elif 'wikipedia' in query:
@@ -121,16 +121,16 @@ def assistant(query):
             os.startfile('C:\Program Files (x86)\Google\Chrome\Application\chrome.exe')  
              
         elif 'hello' in query:          
-            speak('Hello Madam')             
+            speak('Hello Sir')             
         
-        elif 'Molly are you there' in query:
+        elif 'Jarvis are you there' in query:
             speak('always at your service')
              
         elif 'what is your name' in query:
-            speak('Im Molly, Madam')
+            speak('Im Jarvis, sir')
              
         elif 'introduce yourself' in query:
-            speak('Allow me to introduce myself. I am Molly, a virtual Artificial Intelligence. I am here to assist you with a variety of task as best as i can, 24 hours a day, 7 days a week.')
+            speak('Allow me to introduce myself. I am Jarvis, a virtual Artificial Intelligence. I am here to assist you with a variety of task as best as i can, 24 hours a day, 7 days a week.')
             
         elif 'how are you' in query:
             speak("I am fine, Thank you")
@@ -190,7 +190,7 @@ def assistant(query):
         elif "calculate" in query: 
               
             # write your wolframalpha app_id here 
-            app_id = "5XTUEJ-4UEY85L6VJ" 
+            app_id = "app_id" 
             client = wolframalpha.Client(app_id) 
   
             indx = query.lower().split().index('calculate') 
@@ -202,7 +202,7 @@ def assistant(query):
                
                 
         elif 'nothing' in query or 'end' in query or 'abort' or 'nothing else' in query or 'stop'  in query or 'Goobye' in query or 'Goobye Jarvis' in query:            
-            speak('Bye Madam, have a good day.')
+            speak('Bye Sir, have a good day.')
             sys.exit()
         
 #loop to continue executing multiple commands
