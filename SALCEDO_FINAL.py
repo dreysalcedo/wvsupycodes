@@ -4,6 +4,7 @@ Created on Thu Jun 24 17:03:14 2021
 
 @author: gtxnn
 """
+#finals project voice recognition sentiment analysis
 #Speech Recognition
 import speech_recognition as sr
 import pyttsx3
