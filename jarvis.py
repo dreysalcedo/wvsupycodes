@@ -134,7 +134,7 @@ def assistant(query):
             
         elif 'how are you' in query:
             speak("I am fine, Thank you")
-            speak("How are you, Madam")
+            speak("How are you, Sir")
         
         elif "where is" in query:
             query = query.replace("where is", "")
@@ -145,7 +145,7 @@ def assistant(query):
             speak('hr')
         
         elif "who made you" in query or "who created you" in query: 
-            speak("I have been created by Bea.")
+            speak("I have been created by Drey.")
         
         elif 'shutdown system' in query:
                 speak("Hold On a Sec ! Your system is on its way to shut down")
@@ -169,7 +169,7 @@ def assistant(query):
 
         elif 'what time is it' in query or 'time' in query or 'time check' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
-            speak(f"Madam, the time is {strTime}")            
+            speak(f"Sir, the time is {strTime}")            
         
         elif 'open notepad' in query or 'notepad' in query:
             os.startfile('notepad.exe')    
